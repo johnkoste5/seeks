@@ -1,0 +1,34 @@
+<p>Login </p>
+
+<!-- you're not displaying the flash message on to the page  -->
+
+<% if flash[:errors] %>
+  <%= flash[:errors] %>
+<% end %>
+<form action="/sessions" method="post" role="form">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Enter email" id = "Email">
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Enter password" id = "Password">
+  </p>
+  <p>
+    <label for="password_confirmation">Password Confirmation</label>
+    <input type="password" name="user[password_confirmation]" placeholder="Enter password" id="password_confirmation" >
+  </p> 
+  <button type="submit" class="btn btn-default">Log In</button>
+</form>
+
+
+<!-- So for finding elements on a page with capybara we can use id or name, here lets use id so that we dont have to change the backend to accomodate changes to the front end -->
+
+<!-- Alright better we're down to only one error! -->
+
+<!-- SO problems we had just to recap -->
+
+<!-- We used the wrong identifies for capybara -->
+<!-- we need to display the error  -->
+<!-- Good thing was that the errors were small  -->

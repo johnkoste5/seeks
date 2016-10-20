@@ -1,0 +1,28 @@
+<h1>New page</h1>
+
+<form action='/users' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>
+    <label for="name">Name</label>
+    <input id="Name" type="text" name="user[name]" placeholder="Enter name">
+  </p>
+
+
+  <p>
+    <label for="email">Email</label>
+    <input id="Email" type="email" name="user[email]" placeholder="Enter email">
+  </p>
+  
+  <p>
+    <label for="password">Password</label>
+    <input id="Password" type="password" name="user[password]" placeholder="Enter password">
+  </p>
+   <p>
+    <label for="password_confirmation">Password Confirmation</label>
+    <input id="Password Confirmation" type="password" name="user[password_confirmation]" placeholder="Enter password">
+  </p> 
+  <button type="submit" id = "Join">Join</button>
+</form>
+<p>
+  <a href="/sessions/new">Member?</a>
+</p>
